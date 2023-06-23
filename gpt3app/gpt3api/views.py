@@ -9,7 +9,7 @@ from django.views.decorators.csrf import csrf_exempt
 import openai
 
 
-
+@csrf_exempt
 def gpt3_request(request): 
     if request.method == 'POST' :
         prompt = request.POST.get('prompt', '')
