@@ -19,4 +19,4 @@ COPY . /code/
 EXPOSE 9000
 
 # Start the Django development server
-CMD ["python", "manage.py", "runserver", "0.0.0.0:9000"]
+CMD ["python", "gpt3app/manage.py", "runserver", "0.0.0.0:9000"]
