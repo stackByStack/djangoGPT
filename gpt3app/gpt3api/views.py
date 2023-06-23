@@ -17,7 +17,7 @@ def gpt3_request(request):
         # Replace 'YOUR_API_KEY' with your actual OpenAI API key
         openai.api_key = os.environ.get('API_KEY')
         response = openai.Completion.create(
-            engine='text-davinci-003',
+            engine='gpt-3.5-turbo',
             prompt=prompt,
             max_tokens=1024,
             n = 1,
