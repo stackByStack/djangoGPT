@@ -6,14 +6,14 @@ ENV PYTHONUNBUFFERED 1
 ENV PYTHONDONTWRITEBYTECODE 1
 
 # Set the working directory in the container
-WORKDIR .
+WORKDIR /code
 
 # Install dependencies
-# COPY requirements.txt /code/
+COPY requirements.txt /code/
 RUN pip install --no-cache-dir -r requirements.txt
 
 # Copy the Django project code into the container
-# COPY . /code/
+COPY . /code/
 
 # Expose the port that Django runs on (default is 8000)
 EXPOSE 9000
