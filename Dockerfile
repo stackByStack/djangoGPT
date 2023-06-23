@@ -11,6 +11,7 @@ WORKDIR /code
 # Install dependencies
 COPY requirements.txt /code/
 RUN pip install --no-cache-dir -r requirements.txt
+RUN chmod 777 /usr/local/bin/python
 
 # Copy the Django project code into the container
 COPY . /code/
